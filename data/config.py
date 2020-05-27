@@ -182,7 +182,7 @@ crack_dataset = dataset_base.copy({
       'valid_images': './concrete_cracks/val' ,
       
       'class_names': ('crack'),
-      'label_map': { 1:  1 }
+      'label_map': { 0:  1 }
 })
 
 
