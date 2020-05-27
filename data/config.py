@@ -172,7 +172,18 @@ pascal_sbd_dataset = dataset_base.copy({
     'class_names': PASCAL_CLASSES,
 })
 
-
+crack_dataset = dataset_base.copy({
+      'name': 'Concrete cracks',
+      
+      'train_info': '../concrete_cracks/train/coco_annotations.json',
+      'train_images': '../concrete_cracks/train',
+      
+      'valid_info': '../concrete_cracks/val/coco_annotations.json',
+      'valid_images': '../concrete_cracks/val' ,
+      
+      'class_names': ('crack'),
+      'label_map': { 1:  1 }
+})
 
 
 
@@ -657,8 +668,8 @@ yolact_base_config = coco_base_config.copy({
     'name': 'yolact_base',
 
     # Dataset stuff
-    'dataset': coco2017_dataset,
-    'num_classes': len(coco2017_dataset.class_names) + 1,
+    'dataset': crack_dataset,
+    'num_classes': len(crack_dataset.class_names) + 1,
 
     # Image Size
     'max_size': 550,
