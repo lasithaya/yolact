@@ -107,7 +107,7 @@ class COCODetection(data.Dataset):
             Note that if no crowd annotations exist, crowd will be None
         """
         img_id = self.ids[index]
-        print(img_id)
+        #print(img_id)
 
         if self.has_gt:
             ann_ids = self.coco.getAnnIds(imgIds=img_id)
@@ -134,7 +134,7 @@ class COCODetection(data.Dataset):
         # In 2014, images have the pattern COCO_{train/val}2014_%012d.jpg, while in 2017 it's %012d.jpg.
         # Our script downloads the images as %012d.jpg so convert accordingly.
         file_name = self.coco.loadImgs(img_id)[0]['file_name']
-        print(file_name)
+        #print(file_name)
         if file_name.startswith('COCO'):
             file_name = file_name.split('_')[-1]
 
