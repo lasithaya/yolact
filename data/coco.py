@@ -107,6 +107,7 @@ class COCODetection(data.Dataset):
             Note that if no crowd annotations exist, crowd will be None
         """
         img_id = self.ids[index]
+        print(img_id)
 
         if self.has_gt:
             ann_ids = self.coco.getAnnIds(imgIds=img_id)
