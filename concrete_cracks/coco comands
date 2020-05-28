@@ -1,0 +1,2 @@
+python labelme2coco.py ./train ./train2 --labels labels.txt
+
