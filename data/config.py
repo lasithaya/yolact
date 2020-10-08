@@ -429,7 +429,7 @@ coco_base_config = Config({
     'dataset': coco2014_dataset,
     'num_classes': 81, # This should include the background class
 
-    'max_iter': 400000,
+    'max_iter': 4000,
 
     # The maximum number of detections for evaluation
     'max_num_detections': 100,
@@ -441,7 +441,7 @@ coco_base_config = Config({
 
     # For each lr step, what to multiply the lr with
     'gamma': 0.1,
-    'lr_steps': (280000, 360000, 400000),
+    'lr_steps': (28000, 3600, 4000),
 
     # Initial learning rate to linearly warmup from (if until > 0)
     'lr_warmup_init': 1e-4,
@@ -608,7 +608,7 @@ coco_base_config = Config({
 
     # Whether or not to tie the mask loss / box loss to 0
     'train_masks': True,
-    'train_boxes': True,
+    'train_boxes': False,
     # If enabled, the gt masks will be cropped using the gt bboxes instead of the predicted ones.
     # This speeds up training time considerably but results in much worse mAP at test time.
     'use_gt_bboxes': False,
