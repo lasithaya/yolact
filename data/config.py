@@ -175,11 +175,11 @@ pascal_sbd_dataset = dataset_base.copy({
 crack_dataset = dataset_base.copy({
       'name': 'Concrete cracks',
       
-      'train_info': './concrete_cracks/train/coco_annotations.json',
+      'train_info': './concrete_cracks/train/annotations.json',
       'train_images': './concrete_cracks/train',
       
-      'valid_info': './concrete_cracks/val/coco_annotations.json',
-      'valid_images': './concrete_cracks/val' ,
+      'valid_info': './concrete_cracks/train/annotations.json',
+      'valid_images': './concrete_cracks/train' ,
       
       'class_names': ('crack'),
       'label_map': { 0:  1 }
@@ -675,8 +675,8 @@ yolact_base_config = coco_base_config.copy({
     'max_size': 550,
     
     # Training params
-    'lr_steps': (2800, 6000, 7000, 7500),
-    'max_iter': 8000,
+    'lr_steps': (28000, 60000, 70000, 75000),
+    'max_iter': 80000,
     
     # Backbone Settings
     'backbone': resnet101_backbone.copy({
