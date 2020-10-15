@@ -176,10 +176,10 @@ crack_dataset = dataset_base.copy({
       'name': 'Concrete cracks',
       
       'train_info': './concrete_cracks/train/annotations.json',
-      'train_images': './concrete_cracks/train',
+      'train_images': './concrete_cracks/train/JPEGImages/',
       
-      'valid_info': './concrete_cracks/train/annotations.json',
-      'valid_images': './concrete_cracks/train' ,
+      'valid_info': './concrete_cracks/val/annotations.json',
+      'valid_images': './concrete_cracks/val/JPEGImages/' ,
       
       'class_names': ('crack'),
       'label_map': { 0:  1 }
@@ -675,8 +675,8 @@ yolact_base_config = coco_base_config.copy({
     'max_size': 550,
     
     # Training params
-    'lr_steps': (28000, 60000, 70000, 75000),
-    'max_iter': 80000,
+    'lr_steps': (12000, 19000, 22000, 25000),
+    'max_iter': 25000,
     
     # Backbone Settings
     'backbone': resnet101_backbone.copy({
