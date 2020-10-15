@@ -176,10 +176,10 @@ crack_dataset = dataset_base.copy({
       'name': 'Concrete cracks',
       
       'train_info': './concrete_cracks/train/annotations.json',
-      'train_images': './concrete_cracks/train/JPEGImages/',
+      'train_images': './concrete_cracks/train',
       
       'valid_info': './concrete_cracks/val/annotations.json',
-      'valid_images': './concrete_cracks/val/JPEGImages/' ,
+      'valid_images': './concrete_cracks/val' ,
       
       'class_names': ('crack'),
       'label_map': { 0:  1 }
