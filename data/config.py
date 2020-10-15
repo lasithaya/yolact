@@ -175,11 +175,11 @@ pascal_sbd_dataset = dataset_base.copy({
 crack_dataset = dataset_base.copy({
       'name': 'Concrete cracks',
       
-      'train_info': './concrete_cracks/train/annotations.json',
-      'train_images': './concrete_cracks/train',
+      'train_info': './data/concrete_cracks/train/annotations.json',
+      'train_images': './data/concrete_cracks/train',
       
-      'valid_info': './concrete_cracks/val/annotations.json',
-      'valid_images': './concrete_cracks/val' ,
+      'valid_info': './data/concrete_cracks/val/annotations.json',
+      'valid_images': './data/concrete_cracks/val',
       
       'class_names': ('crack'),
       'label_map': { 0:  1 }
