@@ -1,4 +1,4 @@
-Concrete Crack Detection With YOLACT
+#Concrete Crack Detection With YOLACT
 
 
 A simple, fully convolutional model for real-time instance segmentation. This is the code for our papers:
@@ -46,21 +46,5 @@ In order to use YOLACT++, make sure you compile the DCNv2 code. (See [Installati
    ```
 
 
-# Evaluation
 
-## Quantitative Results on COCO
-`
-## Qualitative Results on COCO
-```Shell
-# Display qualitative results on COCO. From here on I'll use a confidence threshold of 0.15.
-python eval.py --trained_model=weights/yolact_base_54_800000.pth --score_threshold=0.15 --top_k=15 --display
-```
-## Benchmarking on COCO
-```Shell
-# Run just the raw model on the first 1k images of the validation set
-python eval.py --trained_model=weights/yolact_base_54_800000.pth --benchmark --max_images=1000
-```
-## Images
-
-# Training
 
